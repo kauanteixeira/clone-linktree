@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&display=swap");
+
+/*==========RESET==========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  background-color: var(--baseColor);
+}
+
+/*==========VARIABLES==========*/
+:root {
+  --baseColor: rgb(61, 59, 60);
+  --fontColor: rgb(255, 255, 255);
+}
+
+/*==========CONTENT==========*/
+.container {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile img {
+  width: 96px;
+  width: 96px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.profile .profile-name {
+  color: var(--fontColor);
+  font-size: 1rem;
+  margin: 0px;
+  font-weight: 700;
+  line-height: 1.5;
+  max-width: 100%;
+}
+
+/*==========LINKS==========*/
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--baseColor);
+  background-color: var(--fontColor);
+  border: 0.125rem solid var(--fontColor);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  transition: background-color 0.25s;
+}
+
+.links a:hover {
+  border: 2px solid var(--fontColor);
+  background-color: var(--baseColor);
+  color: var(--fontColor);
+}
+
+/*==========MEDIA==========*/
+@media (max-width: 680px) {
+  .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 1rem 2rem 1rem;
+  }
+}
