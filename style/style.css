@@ -18,8 +18,9 @@ body {
 
 /*==========VARIABLES==========*/
 :root {
-  --baseColor: rgb(61, 59, 60);
-  --fontColor: rgb(255, 255, 255);
+  --baseColor: #272727;
+  --lightGray: #7d7d7d;
+  --fontColor: #fafafa;
 }
 
 /*==========CONTENT==========*/
@@ -49,10 +50,22 @@ body {
 .profile .profile-name {
   color: var(--fontColor);
   font-size: 1rem;
-  margin: 0px;
   font-weight: 700;
   line-height: 1.5;
   max-width: 100%;
+}
+
+.lives-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--fontColor);
+  font-size: 0.7rem;
+  margin: 0.5rem;
+}
+
+.lives-in i {
+  font-size: 0.875rem;
 }
 
 .links-profile {
@@ -60,12 +73,9 @@ body {
 }
 
 .icons i {
-  color: white;
-  margin: .5rem; 
-}
-
-.icons .active i {
-  width: 50px;
+  color: var(--fontColor);
+  margin: 0.5rem;
+  font-size: 1.25rem;
 }
 
 /*==========LINKS==========*/
@@ -79,27 +89,33 @@ body {
 }
 
 .links a {
-  text-decoration: none;
-  color: var(--baseColor);
-  background-color: var(--fontColor);
-  filter: drop-shadow(0.3rem 0.5rem var(--baseColor));
+  color: var(--fontColor);
   width: 90%;
-  height: 3rem;
-  border-radius: 1.5rem;
+  height: 3.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 1.25rem;
+  text-decoration: none;
+  border-radius: 1.75rem;
+  background-color: var(--lightGray);
   font-weight: 700;
   margin-bottom: 1.5rem;
+  border: 2px solid var(--fontColor);
+  filter: drop-shadow(0 0.6rem var(--baseColor));
   transition: background-color 0.25s ease;
   transition: filter 0.25s ease;
+  position: relative;
+}
+
+.links a i {
+  font-size: 30px;
+  left: 1rem;
+  position: absolute;
 }
 
 .links a:hover {
   background-color: var(--baseColor);
-  filter: drop-shadow(0.3rem 0.5rem #cecece);
-  color: var(--fontColor);
+  filter: drop-shadow(0 0.6rem var(--lightGray));
 }
 
 /*==========MEDIA==========*/
